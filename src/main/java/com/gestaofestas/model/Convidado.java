@@ -2,8 +2,8 @@ package com.gestaofestas.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
@@ -12,13 +12,15 @@ public class Convidado implements Serializable {
     // @GeneratedValue
     @Id
     private Long id;
+    @Column
     private String nome;
-    private Integer quantidadeDeAcompanhante;
+    @Column
+    private Integer quantidadeAcompanhante;
 
-    public Convidado(Long id, String nome, Integer quantidadeDeAcompanhante) {
+    public Convidado(Long id, String nome, Integer quantidadeAcompanhante) {
         this.id = id;
         this.nome = nome;
-        this.quantidadeDeAcompanhante = quantidadeDeAcompanhante;
+        this.quantidadeAcompanhante = quantidadeAcompanhante;
     }
 
     public Convidado() {
@@ -40,12 +42,12 @@ public class Convidado implements Serializable {
         this.nome = nome;
     }
 
-    public Integer getQuantidadeDeAcompanhante() {
-        return this.quantidadeDeAcompanhante;
+    public Integer getquantidadeAcompanhante() {
+        return this.quantidadeAcompanhante;
     }
 
-    public void setQuantidadeDeAcompanhante(Integer quantidadeDeAcompanhante) {
-        this.quantidadeDeAcompanhante = quantidadeDeAcompanhante;
+    public void setquantidadeAcompanhante(Integer quantidadeAcompanhante) {
+        this.quantidadeAcompanhante = quantidadeAcompanhante;
     }
 
     public Convidado id(Long id) {
@@ -58,15 +60,15 @@ public class Convidado implements Serializable {
         return this;
     }
 
-    public Convidado quantidadeDeAcompanhante(Integer quantidadeDeAcompanhante) {
-        this.quantidadeDeAcompanhante = quantidadeDeAcompanhante;
+    public Convidado quantidadeAcompanhante(Integer quantidadeAcompanhante) {
+        this.quantidadeAcompanhante = quantidadeAcompanhante;
         return this;
     }
 
     @Override
     public String toString() {
-        return "{" + " id='" + getId() + "'" + ", nome='" + getNome() + "'" + ", quantidadeDeAcompanhante='"
-                + getQuantidadeDeAcompanhante() + "'" + "}";
+        return "{" + " id='" + getId() + "'" + ", nome='" + getNome() + "'" + ", quantidadeAcompanhante='"
+                + getquantidadeAcompanhante() + "'" + "}";
     }
 
 }

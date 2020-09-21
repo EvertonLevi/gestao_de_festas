@@ -4,5 +4,5 @@ CREATE TABLE convidado
 (
     id INTEGER PRIMARY KEY NOT NULL,
     nome VARCHAR (50),
-    quantidadeDeAcompanhante INTEGER NOT NULL
+    quantidade_acompanhante INTEGER NOT NULL
 );
