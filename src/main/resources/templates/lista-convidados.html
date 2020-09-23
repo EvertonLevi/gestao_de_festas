@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<meta charset="UTF-8">
@@ -27,8 +27,8 @@
 				</thead>
 				<tbody>
 					<tr th:each="convidado : ${convidados}">
-						<td th:text="${convidado.nome}"></td>
-						<td th:text="${convidado.quantidadeDeAcompanhantes}">3</td>
+						<td th:text="#{convidado.nome}"></td>
+						<td th:text="#{convidado.quantidadeAcompanhante}">3</td>
 					</tr>
 				</tbody>
 			</table>

@@ -17,7 +17,7 @@ public class ConvidadosController {
 		ModelAndView modelAndView = new ModelAndView("lista-convidados");
 		modelAndView.addObject("convidados", convidados.findAll());
 
-		System.out.println("***** " + convidados.findAll().toString() + " *******");
+		System.out.println("****** " + convidados.findAll().toString() + " *******");
 		return modelAndView;
 	}
 
